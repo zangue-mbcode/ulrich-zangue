@@ -5,6 +5,7 @@ import Header from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { ThemeProvider } from '@/components/theme/theme-provider'
 import { cn } from '@/lib/utils';
+import Cursor from '@/components/cursor/cursor';
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -34,6 +35,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          
+          <Cursor />
         <div className="flex flex-col h-full ">
           <div className='z-40'>
             <Header />

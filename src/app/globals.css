@@ -74,3 +74,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* html{
+  cursor: none;
+} */
+
+.cursor{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 999;
+  background-color: #000000;
+}
+.follower-cursor{
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #000000;
+  position: fixed;
+  z-index: 999;
+  border-radius: 50%;
+}
