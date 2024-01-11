@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "font-sans antialiased",
           fontSans.variable
         )}>
       <ThemeProvider
@@ -36,16 +36,16 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           
-          <Cursor />
-        <div className="flex flex-col h-full ">
-          <div className='z-40'>
+          {/* <Cursor /> */}
+        <div className="">
+          {/* <div className='z-40'>
             <Header />
-          </div>
-          <div className="flex-1 w-full m-auto  w-full z-0">{children}</div>
+          </div> */}
+          <div className="">{children}</div>
 
-          <div className='w-full'>
+          {/* <div className='w-full'>
           <Footer />
-          </div>
+          </div> */}
         </div>
       </ThemeProvider>
         
