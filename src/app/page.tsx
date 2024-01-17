@@ -181,7 +181,10 @@ export default function Home() {
         </div>
         <div className="nav-buttons">
           <div className="btn">
-            <button>Projets</button>
+            <button>Home</button>
+          </div>
+          <div className="btn">
+            <button onClick={() => console.log('click')} >Projets</button>
           </div>
           <div className="btn">
             <button>About</button>

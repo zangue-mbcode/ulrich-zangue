@@ -83,8 +83,9 @@ html{
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   mix-blend-mode: difference;
@@ -285,8 +286,9 @@ footer > div {
 
 .counter{
   position: fixed;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 40px;
   padding: 2em;
 }

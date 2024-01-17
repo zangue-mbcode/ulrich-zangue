@@ -5,21 +5,7 @@ import gsap from "gsap"
 
 
 const Cursor = () => {
-  const cursorRef = useRef<HTMLDivElement>(null)
-  const followerRef = useRef<HTMLDivElement>(null)
-
-  const moveCursor = (e: MouseEvent): void => {
-    gsap.to(cursorRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.2,
-    }),
-    gsap.to(followerRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 0.9,
-    })
-  }
+  
 
   useEffect(() => {
     const cursor = document.getElementById("custom-cursor");
@@ -57,8 +43,8 @@ const Cursor = () => {
   
   return (
     <div >
-      <div ref={cursorRef} id="custom-cursor" className="custom-cursor"></div>
-      <div ref={followerRef} className="cursor-text"></div>
+      <div id="custom-cursor" className="custom-cursor"></div>
+      <div className="cursor-text"></div>
     </div>
   )
 }
