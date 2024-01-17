@@ -1,17 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter as FontSans } from "next/font/google";
 import './globals.css'
 import Header from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { ThemeProvider } from '@/components/theme/theme-provider'
 import { cn } from '@/lib/utils';
 import Cursor from '@/components/cursor/cursor';
-
-export const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -26,8 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(
-          "font-sans antialiased",
-          fontSans.variable
+          "font-sans antialiased"
         )}>
       <ThemeProvider
           attribute="class"
