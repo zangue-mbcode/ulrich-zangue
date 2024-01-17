@@ -69,12 +69,17 @@ export default function Home() {
             for (let i = 0; i <= index ; i++) {
               shuffledText += 
                 i < index ? originalText![i] : Math.random().toString(36)[2]
+                console.log("originalText", originalText)
+                console.log("shuffledText", shuffledText)
+                console.log("originalText![i]", originalText![i])
+                console.log("Math.random().toString(36)[2]", Math.random().toString(36)[2])
             }
             element.textContent = shuffledText + originalText!.substring(index + 1);
             index++
           } else {
             clearInterval(shuffleInterval);
             counter!.textContent = originalText;
+            element!.textContent = originalText;
           }
         }, 100);
 
@@ -216,18 +221,9 @@ export default function Home() {
             <p>Year</p>
             <p>2024</p>
           </div>
-          <div className="agency">
-            <p>Agency</p>
-            <p>n / a</p>
-          </div>
           <div className="role">
             <p>Role</p>
             <p>Front End Developer</p>
-          </div>
-          <div className="awards">
-            <p>Awards</p>
-            <p>Award name</p>
-            <p>Award name</p>
           </div>
         </div>
       </footer>
