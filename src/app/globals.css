@@ -157,7 +157,7 @@ nav{
 
 .logo h1{
   font-family: "Lexa";
-  font-size: 80px;
+  font-size: 60px;
   color: var(--color-accent);
 }
 
@@ -239,25 +239,14 @@ footer > div {
 
 .slide-info {
   display: flex;
-  align-items: flex-start;
-  gap: 1em;
-}
-
-.slide-info > div{
-  flex: 1;
+  align-items: center;
+  width: 100%;
 }
 
 .slide-info p {
-  font-size: 24px;
-  padding: 0.1em 0 0.5em 0;
+  font-size: 17px;
 }
 
-.year p:nth-child(1),
-.role p:nth-child(1),
-.agency p:nth-child(1),
-.awards p:nth-child(1) {
-  margin-bottom: 0.5em;
-}
 
 .hero-img{
   position: absolute;

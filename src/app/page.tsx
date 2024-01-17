@@ -214,19 +214,10 @@ export default function Home() {
       </div>
       
       <footer>
-        <div className="slide-copy">
-          <div className="slide-index">p / 03</div>
-          <div className="slide-name">Ulrich Zangue</div>
-          <button>Visit</button>
-        </div>
+        
         <div className="slide-info">
           <div className="year">
-            <p>Year</p>
-            <p>2024</p>
-          </div>
-          <div className="role">
-            <p>Role</p>
-            <p>Front End Developer</p>
+            <p>&copy; 2024, Ulrich Zangue</p>
           </div>
         </div>
       </footer>
