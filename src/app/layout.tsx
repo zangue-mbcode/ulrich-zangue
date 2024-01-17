@@ -36,7 +36,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           
-          {/* <Cursor /> */}
+          <Cursor />
         <div className="">
           {/* <div className='z-40'>
             <Header />

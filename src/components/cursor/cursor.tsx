@@ -22,21 +22,43 @@ const Cursor = () => {
   }
 
   useEffect(() => {
-    gsap.set(cursorRef, {
-        xPercent: 100,
-        yPercent: 100,
-    });
-    gsap.set(followerRef, {
-        xPercent: -20,
-        yPercent: -20,
-    });
-    window.addEventListener("mousemove", moveCursor)
+    const cursor = document.getElementById("custom-cursor");
+    const links = document.querySelectorAll('a');
+    const cursorText = document.querySelector<HTMLDivElement>('cursor-text');
+
+    const onMouseMove = (event: any) => {
+      const {clientX, clientY} = event;
+      gsap.to(cursor, {x: clientX, y: clientY})
+    }
+
+    const onMouseEnterLink = (event: any) => {
+      const link = event.target;
+      if (link.classList.contain('view')) {
+        gsap.to(cursor, {scale: 4});
+        cursorText!.style!.display = 'block';
+      } else {
+        gsap.to(cursor, {scale: 4});
+      }
+    }
+
+    const onMouseLeaveLink = () => {
+      gsap.to(cursor, {scale: 1})
+      cursorText!.style!.display = 'none';
+    }
+
+
+    document.addEventListener('mousemove', onMouseMove);
+    links.forEach((link) => {
+      link.addEventListener('mouseenter', onMouseEnterLink)
+      link.addEventListener('mouseleave', onMouseLeaveLink)
+    })
+
   }, []);
   
   return (
     <div >
-      <div ref={cursorRef} className="cursor"></div>
-      <div ref={followerRef} className="follower-cursor"></div>
+      <div ref={cursorRef} id="custom-cursor" className="custom-cursor"></div>
+      <div ref={followerRef} className="cursor-text"></div>
     </div>
   )
 }
